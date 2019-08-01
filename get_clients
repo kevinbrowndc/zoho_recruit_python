@@ -1,0 +1,13 @@
+#All Clients
+import requests
+import time
+
+myToken = 'Add_Token_Here'
+myUrl = 'https://recruit.zoho.com/recruit/private/json/Clients/getRecords?newFormat=1&authtoken=Add_Token_Here&scope=recruitapi&fromIndex=0&toIndex=200&sortColumnString=Client Name&sortOrderString=desc&version=2'
+r = requests.get(myUrl)
+data = r.json()
+client_dict = data['response']['result']['Clients']['row']
+for item in client_dict:
+    a = (item['FL'])
+    y = next(item for item in a if item["val"] == "Client Name")
+    print y["content"]
