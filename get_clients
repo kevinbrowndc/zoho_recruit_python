@@ -1,6 +1,5 @@
 #All Clients
 import requests
-import time
 
 myToken = 'Add_Token_Here'
 myUrl = 'https://recruit.zoho.com/recruit/private/json/Clients/getRecords?newFormat=1&authtoken=Add_Token_Here&scope=recruitapi&fromIndex=0&toIndex=200&sortColumnString=Client Name&sortOrderString=desc&version=2'
